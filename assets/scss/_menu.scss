@@ -1,0 +1,14 @@
+/* Menu Styles */
+#wpadminbar {
+	position: fixed;
+}
+
+.primary-menu > li.current_page_ancestor,
+.primary-menu > li.current_page_item {
+
+	&,
+	& > a {
+		background-color: $primary-color !important;
+		color: white;
+	}
+}

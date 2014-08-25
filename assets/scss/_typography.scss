@@ -1,0 +1,127 @@
+/* This holds our basic typography styles
+ * You're probably wondering where the rest of the magic for styling is aren't you? It's in _settings.scss
+ * and bower_components/foundation/scss/foundation/components/_type.scss. Neat huh?
+ */
+
+.content-wrap,
+.mceContentBody {
+h1, h2, h3, h4, h5, h6 {
+	margin: rem-calc( 4 0 4 0);
+	padding: rem-calc( 4 0 4 0);
+}
+h1 {
+	font-size: 2.4em;
+	letter-spacing: -0.8px;
+	}
+h2 {
+	font-size: 2.2em;
+	letter-spacing: -0.6px;
+	color: $primary-color;
+	}
+h3 {
+	font-size: 2em;
+	letter-spacing: -0.4px;
+	}
+h4 {
+	font-size: 1.6em;
+	}
+h5 {
+	font-size: 1.4em;
+	}
+h6 {
+	font-size: 1.1em;
+	letter-spacing: 0.2px;
+	border-bottom: 1px solid rgba(0,0,0, .08);
+	}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: $header-font-color;
+	text-decoration: none;
+	border: none;
+	}
+h1 a:hover, h2 a:hover, h3 a:hover,
+h4 a:hover, h5 a:hover, h6 a:hover {
+	color: $primary-color;
+	text-decoration: none;
+	border: none;
+	}
+.headline {
+	font-family: 'Montserrat';
+	font-size: 2.8em;
+	font-weight: $header-font-weight;
+	line-height: 1.1;
+	letter-spacing: -1px;
+	}
+.title {
+	font-family: 'Montserrat';
+	font-size: 1.6em;
+	font-weight: $header-font-weight;
+	letter-spacing: -0.6px;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+	}
+p {
+	line-height: 1.8;
+}
+
+.subtitle,
+.lead-in {
+	&,
+	p {
+		color: #999999;
+		font-weight: 300;
+		font-size: rem-calc(20);
+		line-height: 1.5;
+	}
+}
+
+blockquote {
+	font-family: 'Merriweather', Georgia, Times, serif;
+	color: #333333;
+	font-size: rem-calc(22);
+	line-height: 1.6;
+	margin: rem-calc( 20 0 );
+	padding: rem-calc( 20 );
+	border-top: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	border-left: none;
+
+	p {
+		color: #333333;
+		margin: 0;
+		padding: 0;
+		font-size: rem-calc(22);
+	}
+
+	cite {
+		@extend h5;
+		font-size: rem-calc( 18 );
+	}
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+// Search Form
+.search-form {
+	.submit.button {
+		@extend .button;
+		margin: -2px 0px 2px 2px;
+		padding: 8px 12px;
+			top: 0px;
+
+		&:hover {
+			@extend .button:hover;
+			top: 0px;
+		}
+	}
+}
+
+}

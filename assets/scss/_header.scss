@@ -1,0 +1,31 @@
+/* Header Styles */
+
+.primary-menu li {
+	a {
+
+		&:hover {
+			background: rgba(0, 0, 0, .08);
+		}
+	}
+
+	.dropdown li {
+		text-align: left;
+
+		&:hover {
+			background: rgba(0, 0, 0, .08) !important;
+			a {
+				box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
+			}
+		}
+	}
+}
+
+.top-bar-section .primary-menu > li {
+	margin-right: 2px;
+	border-radius: 2px 2px 0px 0px !important;
+	padding: 0 2px;
+
+	& > a {
+		border-radius: 2px 2px 0px 0px !important;
+	}
+}

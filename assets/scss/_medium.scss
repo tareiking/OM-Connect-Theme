@@ -1,0 +1,25 @@
+/* CSS for Medium Devices */
+@media #{$medium-only} {
+	nav.top-bar {
+		background-color: $menu-bg-color;
+		margin: 0 40px;
+		border-top-right-radius: 2px;
+		border-top-left-radius: 2px;
+
+		.primary-menu li {
+			border-radius: 0;
+		}
+	}
+
+	nav.top-bar.expanded {
+		background-color: $menu-bg-color;
+
+		.name {
+			box-shadow: 0px -1px 1px rgba(0, 0, 0, .08);
+		}
+		.js-generated a {
+			font-size: rem-calc(14);
+			text-transform: uppercase;
+		}
+	}
+}

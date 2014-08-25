@@ -1,0 +1,79 @@
+/* Comment Styles */
+
+#comments {
+	background: #F9F9F9;
+	margin-top: 24px;
+	padding: 12px 24px;
+	border-radius: 2px;
+	box-shadow: 0px 2px 0px rgba(0, 0, 0, .12);
+}
+
+.comments-area {
+	.vcard {
+		border: none;
+		padding: 0;
+		margin: 0;
+		display: inline;
+
+		img {
+			float: right;
+			background: #FFFFFF;
+			margin: 0px 0px 12px 12px;
+			padding: 6px;
+			border: none;
+			border-radius: 3px;
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, .08);
+		}
+	}
+
+	.comment-list {
+		margin-left: 0;
+	}
+
+	.comment-list,
+	.comment-list ul {
+		list-style: none;
+
+			li {
+				box-shadow: 0px 1px 0px rgba(0, 0, 0, .12);
+			}
+	}
+
+	.comment-list ul li {
+		box-shadow: 0px -1px 0px rgba(0, 0, 0, .12);
+		padding-top: rem-calc(14);
+	}
+
+	.comment {
+		margin-top: rem-calc(14);
+		box-shadow: 0px 2px 0px rgba(0, 0, 0, .12);
+	}
+
+	.reply {
+
+		a {
+			@extend .button;
+		}
+
+		a:hover{
+			@extend .button:hover;
+		}
+	}
+
+	#submit{
+		@extend .button;
+
+		&:hover {
+			@extend .button:hover;
+		}
+	}
+}
+
+// Recent comments
+.sidebar #recentcomments li.recentcomments {
+	padding: rem-calc( 12 14 12 0 );
+	a {
+		display: inline !important;
+		padding: 0;
+	}
+}
