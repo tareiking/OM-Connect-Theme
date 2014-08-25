@@ -120,4 +120,4 @@ function om_connect_customise_background(){
 
 	}
 }
-add_action( 'wp_enqueue_scripts', 'om_connect_customise_background' );
+// add_action( 'wp_enqueue_scripts', 'om_connect_customise_background' );
