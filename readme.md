@@ -1,7 +1,7 @@
 Our Marae Connect Theme
 =======================
 
-# To do
+# Roadmap V1
 
 ## mobile
 
@@ -35,7 +35,7 @@ Our Marae Connect Theme
 
 - [x] add image sizes for featured image
 - [x] add description in meta box
-2.0 swap with interchange
+
 
 ## Search Form
 - [x] style searchbar
@@ -48,9 +48,9 @@ Our Marae Connect Theme
 - [ ] pagination
 
 ## templates
--- [x] full width
--- [x] three column
--- shop
+- [x] full width
+- [x] three column
+- [ ] shop
 
 ## blog
 - [x] list
@@ -62,6 +62,6 @@ Our Marae Connect Theme
 
 ## Support for OM Events
 
-- template support: events list
+- [ ] template support: events list
 
-- portfolio: http://organicthemes.com/demo/connect/portfolio/#blank
+- [ ] portfolio: http://organicthemes.com/demo/connect/portfolio/#blank
