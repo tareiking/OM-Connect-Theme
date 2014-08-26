@@ -19,6 +19,8 @@ function bambino_enqueue_custom_styles()
 
 			body .page-header .site-title {
 				font-family: <?php echo get_theme_mod( 'om_sitelogo_font' ); ?>;
+				color: <?php echo get_theme_mod( 'om_sitelogo_color' ); ?>;
+				text-shadow:  2px 2px 0px rgba(0, 0, 0, .08);
 			}
 
 		</style>

@@ -9,10 +9,11 @@ if ( ! class_exists( 'WP_Customize_Control' ) )
 
 function om_connect_customizer_settings( $wp_customize ) {
 
+	// Site logo customiser settings
 	$wp_customize->add_setting(
 		'om_sitelogo_font',
 		array(
-			'default'   => 'times',
+			'default'   => 'Montserrat',
 			'transport' => 'refresh'
 		)
 	);
@@ -24,6 +25,7 @@ function om_connect_customizer_settings( $wp_customize ) {
 			'label'    => 'Site header font',
 			'type'     => 'select',
 			'choices'  => array(
+				'Montserrat' => 'Montserrat',
 				'Yesteryear' => 'Yesteryear',
 				'Pacifico' => 'Pacifico',
 				'Satisfy' => 'Satisfy',
@@ -33,6 +35,18 @@ function om_connect_customizer_settings( $wp_customize ) {
 		)
 	);
 
+	$wp_customize->add_setting( 'om_sitelogo_color' , array(
+		'default'     => '#ffffff',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'om_sitelogo_color', array(
+		'label'      => __( 'Site title color', 'om-connect' ),
+		'section'    => 'title_tagline',
+		'settings'   => 'om_sitelogo_color',
+	) ) );
+
+	// Theme Colors
 	$wp_customize->get_section('colors')->title = __( 'Theme Colors' );
 
 	$wp_customize->add_setting( 'primary_color' , array(
