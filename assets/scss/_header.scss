@@ -31,6 +31,11 @@
 }
 
 // Site Header / logo
+
+.page-header .site-logo {
+	padding: rem-calc(30 0);
+}
+
 .page-header .site-title {
 	position: static;
 	clip: auto;
