@@ -174,7 +174,13 @@ foreach ( glob( get_template_directory() . '/inc/*.php' ) as $filename ) {
  * Google, Google, Google fonty!
  */
 function connect_google_url(){
-	$font_url = add_query_arg( 'family', urlencode( 'Montserrat:400|Open+Sans:400|Merriweather:300' ), "//fonts.googleapis.com/css" );
+	$base_fonts = 'Montserrat:400|Open+Sans:400|Merriweather:300';
+
+	if ( get_theme_mod( 'om_sitelogo_font' ) != '' ) {
+		$base_fonts .= '|' . get_theme_mod( 'om_sitelogo_font' ) . ':400|';
+	}
+
+	$font_url = add_query_arg( 'family', urlencode( $base_fonts ), "//fonts.googleapis.com/css" );
 
 	return $font_url;
 }

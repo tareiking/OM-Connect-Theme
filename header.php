@@ -34,7 +34,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div class="page-header text-center">
+<div class="page-header text-center row">
 	<?php if ( get_header_image() ) { ?>
 		<h1>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

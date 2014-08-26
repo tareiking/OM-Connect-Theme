@@ -29,3 +29,10 @@
 		border-radius: 2px 2px 0px 0px !important;
 	}
 }
+
+// Site Header / logo
+.page-header .site-title {
+	position: static;
+	clip: auto;
+	padding: rem-calc(30 0);
+}
