@@ -17,6 +17,10 @@ function bambino_enqueue_custom_styles()
 				/*background-color: <?php echo get_theme_mod( 'primary_color' ); ?>;*/
 			}
 
+			body .page-header .site-title {
+				font-family: <?php echo get_theme_mod( 'om_sitelogo_font' ); ?>;
+			}
+
 		</style>
 	<?php
 }

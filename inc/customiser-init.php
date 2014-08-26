@@ -8,8 +8,31 @@ if ( ! class_exists( 'WP_Customize_Control' ) )
 	return NULL;
 
 function om_connect_customizer_settings( $wp_customize ) {
-	// Remove some things
-	// $wp_customize->remove_control( 'background_color' );
+
+	$wp_customize->add_setting(
+		'om_sitelogo_font',
+		array(
+			'default'   => 'times',
+			'transport' => 'refresh'
+		)
+	);
+
+	$wp_customize->add_control(
+		'om_sitelogo_font',
+		array(
+			'section'  => 'title_tagline',
+			'label'    => 'Site header font',
+			'type'     => 'select',
+			'choices'  => array(
+				'Yesteryear' => 'Yesteryear',
+				'Pacifico' => 'Pacifico',
+				'Satisfy' => 'Satisfy',
+				'Handlee' => 'Handlee',
+				'Lobster' => 'Lobster',
+			)
+		)
+	);
+
 	$wp_customize->get_section('colors')->title = __( 'Theme Colors' );
 
 	$wp_customize->add_setting( 'primary_color' , array(
