@@ -286,16 +286,41 @@ function om_connect_comment( $comment, $args, $depth ) {
 }
 endif;
 
-function om_connect_show_featured_image(){
-	// If the blog, explicitly use the thumbnail for blog
-	if ( is_home() ) {
+// Featured image: Add featured image to beginning of content
+function om_connect_add_image_to_content( $content ){
 
-		if ( has_post_thumbnail( get_option( 'page_for_posts' ) ) ) {
-			return get_the_post_thumbnail( get_option( 'page_for_posts' ), 'featured-image' ) ;
+	$prepend = the_post_thumbnail( 'featured-image' );
 
-		}
+	$new_content = $prepend . $content;
+
+	return $new_content;
+
+}
+
+// Featured image: Check if image is vertical
+function om_connect_check_image_is_vertical(){
+
+	$image = wp_get_attachment_image_src( get_post_thumbnail_id( ), 'featured-image' );
+
+	if ( $image && ( $image[2] > $image[1] ) ) { // Image height > Image width
+		add_filter( 'the_content', 'om_connect_add_image_to_content' );
+		return false;
 
 	} else {
+
 		return the_post_thumbnail( 'featured-image' );
+	}
+
+}
+
+// Featured image: Show image in header area
+function om_connect_show_featured_image(){
+	// If the blog, explicitly use the thumbnail for blog
+	if ( is_home() && has_post_thumbnail( get_option( 'page_for_posts' ) ) ) {
+
+		return get_the_post_thumbnail( get_option( 'page_for_posts' ), 'featured-image' ) ;
+
+	} else {
+		return om_connect_check_image_is_vertical();
 	}
 }
