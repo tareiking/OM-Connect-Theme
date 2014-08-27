@@ -49,12 +49,12 @@ function om_connect_customizer_settings( $wp_customize ) {
 	// Theme Colors
 	$wp_customize->get_section('colors')->title = __( 'Theme Colors' );
 
-	$wp_customize->add_setting( 'primary_color' , array(
+	$wp_customize->add_setting( 'link_color' , array(
 		'default'     => '#de6540',
 		'transport'   => 'refresh',
 	) );
 
-	$wp_customize->add_setting( 'secondary_color' , array(
+	$wp_customize->add_setting( 'tab_bg_color' , array(
 		'default'     => '#577582',
 		'transport'   => 'refresh',
 	) );
@@ -64,19 +64,19 @@ function om_connect_customizer_settings( $wp_customize ) {
 		'transport'   => 'refresh',
 	) );
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
-		'label'      => __( 'Links and Tab Highlight Color', 'om-connect' ),
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+		'label'      => __( 'Link and Menu Highlight Color', 'om-connect' ),
 		'section'    => 'colors',
-		'settings'   => 'primary_color',
+		'settings'   => 'link_color',
 	) ) );
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'secondary_color', array(
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'tab_bg_color', array(
 		'label'      => __( 'Menu Tabs Background Color', 'om-connect' ),
 		'section'    => 'colors',
-		'settings'   => 'secondary_color',
+		'settings'   => 'tab_bg_color',
 	) ) );
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'button_txt_color', array(
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_hover_color', array(
 		'label'      => __( 'Link Hover Color', 'om-connect' ),
 		'section'    => 'colors',
 		'settings'   => 'link_hover_color',
