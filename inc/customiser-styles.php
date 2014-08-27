@@ -8,13 +8,34 @@ function bambino_enqueue_custom_styles()
 	?>
 		<style type="text/css">
 			.top-bar .top-bar-section .primary-menu li,
-			.top-bar .top-bar-section .primary-menu li a {
-				 /*background-color: <?php echo get_theme_mod( 'secondary_color' ); ?>;*/
+			.top-bar .top-bar-section .primary-menu li a,
+			.top-bar .top-bar-section .primary-menu > li.current_page_item a,
+			.top-bar .top-bar-section .primary-menu > li.current_page_ancestor a,
+			.top-bar .top-bar-section li:not(.has-form) a:not(.button),
+			.top-bar .top-bar-section .dropdown li:not(.has-form):not(.active):hover>a:not(.button) {
+				 background-color: <?php echo get_theme_mod( 'tab_bg_color' ); ?>;
 			}
 
-			.top-bar .top-bar-section .primary-menu > li.current_page_item a,
-			.top-bar .top-bar-section .primary-menu > li.current_page_ancestor a{
-				/*background-color: <?php echo get_theme_mod( 'primary_color' ); ?>;*/
+			.top-bar .top-bar-section .primary-menu li:hover,
+			body .top-bar .top-bar-section .primary-menu li a:hover,
+			.top-bar .top-bar-section .primary-menu > li.current_page_item a:hover,
+			.top-bar .top-bar-section .primary-menu > li.current_page_ancestor a:hover {
+				background-color: <?php echo get_theme_mod( 'tab_bg_color' ); ?>;
+			}
+
+			.top-bar .top-bar-section .primary-menu > li.current_page_item,
+			.top-bar .top-bar-section .primary-menu > li.current_page_ancestor,
+			.top-bar .top-bar-section li.active:not(.has-form) a:not(.button),
+			.top-bar .primary-menu > li.current_page_ancestor > a {
+				background-color: <?php echo get_theme_mod( 'link_color'); ?> !important;
+			}
+
+			.content a,
+			.sidebar a,
+			.content h2,
+			.sidebar .side-nav li a:not(.button),
+			.content .entry-title a:hover {
+				color: <?php echo get_theme_mod( 'link_color'); ?>;
 			}
 
 			body .page-header .site-title {
