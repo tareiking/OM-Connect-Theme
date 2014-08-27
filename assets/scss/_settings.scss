@@ -1425,7 +1425,7 @@ $topbar-link-padding: $topbar-height / 4;
 // $topbar-transition-speed: 300ms;
 // Using rem-calc for the below breakpoint causes issues with top bar
 // $topbar-breakpoint: #{lower-bound($medium-range)}; // Change to 9999px for always mobile layout
-$topbar-breakpoint: 960px; // Change to 9999px for always mobile layout
+$topbar-breakpoint: 1025px; // Change to 9999px for always mobile layout
 $topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})" !default;
 
 // Divider Styles
