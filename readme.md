@@ -1,7 +1,16 @@
 Our Marae Connect Theme
 =======================
 
-# Roadmap V1
+This theme is built for Our Marae WordPress multisite and is designed to offer some basic customisation options to site owners.
+
+# Roadmap V2.0
+
+- [ ] Add a slider support for http://github.com/sennza/pico-slider
+- [ ] Add Pagination styles
+- [ ] Add WooCommerce template support
+- [ ] Add support for OM Events: http://github.com/tareiking/om-events/
+
+# Roadmap V1 Features - Complete, yay!
 
 ## mobile
 
@@ -25,11 +34,11 @@ Our Marae Connect Theme
 
 ## customiser
 
-- add tab colors
-- add primary colors
-- logo size
-- footer font colors
-- [ ] remove background from flashing before backstretch does its thing
+- [x] add tab colors
+- [x] add primary colors
+- [x] logo size
+- [x] footer font colors
+- [x] remove background from flashing before backstretch does its thing
 
 ## featured image
 
@@ -50,7 +59,7 @@ Our Marae Connect Theme
 ## templates
 - [x] full width
 - [x] three column
-- [ ] shop
+- [2.0] shop
 
 ## blog
 - [x] list
@@ -62,6 +71,6 @@ Our Marae Connect Theme
 
 ## Support for OM Events
 
-- [ ] template support: events list
+- [2.0] template support: events list
 
-- [ ] portfolio: http://organicthemes.com/demo/connect/portfolio/#blank
+- [2.0] portfolio: http://organicthemes.com/demo/connect/portfolio/#blank
