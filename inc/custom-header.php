@@ -1,6 +1,6 @@
 <?php
 /**
- * Implement Custom Header functionality for Flair
+ * Implement Custom Header functionality for OM Connect
  *
  * @since OM Connect 1.0
  */
@@ -35,8 +35,8 @@ function om_connect_custom_header_setup() {
 	 */
 	add_theme_support( 'custom-header', apply_filters( 'om_connect_custom_header_args', array(
 		'default-text-color'     => 'fff',
-		'width'                  => 115,
-		'height'                 => 21,
+		'width'                  => 960,
+		'height'                 => 240,
 		'flex-height'            => true,
 		'header-text'            => false,
 		'default-image'          => get_template_directory_uri() . '/assets/images/logo.png',
