@@ -20,7 +20,7 @@ function om_connect_customizer_settings( $wp_customize ) {
 	);
 
 	$wp_customize->add_setting(	'background_color', array (
-		'default'    => '#fefefe',
+		'default'    => '#4773ad',
 		'transport'  => 'refresh',
 	) );
 
