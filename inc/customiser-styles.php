@@ -3,7 +3,7 @@
 /**
  * Load customiser settings
  */
-function bambino_enqueue_custom_styles()
+function om_connect_enqueue_custom_styles()
 {
 	?>
 		<style type="text/css">
@@ -75,4 +75,4 @@ function bambino_enqueue_custom_styles()
 		</style>
 	<?php
 }
-add_action( 'wp_head', 'bambino_enqueue_custom_styles' , 8);
+add_action( 'wp_head', 'om_connect_enqueue_custom_styles' , 8);
