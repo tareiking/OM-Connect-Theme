@@ -15,11 +15,11 @@ get_header(); ?>
 <!-- Main Page Content and Sidebar -->
 
 	<div class="row">
-	<div class="content-wrap">
+	<div class="content-wrap" data-equalizer>
 	<?php get_sidebar( 'three-column' ); ?>
 
 		<!-- Main Blog Content -->
-		<div class="medium-6 columns content" role="content">
+		<div class="medium-6 columns content" role="content" data-equalizer-watch>
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>

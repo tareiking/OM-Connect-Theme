@@ -7,7 +7,7 @@
 ?>
 <!-- Three Column Sidebar -->
 
-	<aside class="medium-3 columns hide-for-small sidebar sidebar-left">
+	<aside class="medium-3 columns hide-for-small sidebar sidebar-left" data-equalizer-watch>
 
 <?php if ( ! dynamic_sidebar( 'three-column-widget-area' ) ) : ?>
 

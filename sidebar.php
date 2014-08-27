@@ -7,13 +7,13 @@
 ?>
 <!-- Sidebar -->
 <?php if ( is_home() ): ?>
-	<aside class="medium-3 columns sidebar">
+	<aside class="medium-3 columns sidebar" data-equalizer-watch>
 <?php elseif ( is_page_template('templates/three-column.php' ) ): ?>
-	<aside class="medium-3 columns sidebar">
+	<aside class="medium-3 columns sidebar" data-equalizer-watch>
 <?php elseif ( ! is_page_template( 'templates/sidebar-left.php' ) ): ?>
-	<aside class="medium-4 columns sidebar">
+	<aside class="medium-4 columns sidebar" data-equalizer-watch>
 <?php else: ?>
-	<aside class="medium-4 pull-8 columns sidebar">
+	<aside class="medium-4 pull-8 columns sidebar" data-equalizer-watch>
 <?php endif; ?>
 
 <?php if ( ! dynamic_sidebar( 'blog-widget-area' ) ) : ?>

@@ -9,7 +9,7 @@
 
 get_header(); ?>
 	<div class="row">
-	<div class="content-wrap">
+	<div class="content-wrap" data-equalizer>
 
 	<?php get_sidebar( 'three-column' ); ?>
 

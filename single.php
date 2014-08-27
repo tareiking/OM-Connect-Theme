@@ -8,10 +8,10 @@
 get_header(); ?>
 
 	<div class="row">
-	<div class="content-wrap">
+	<div class="content-wrap" data-equalizer>
 
 		<!-- Main Blog Content -->
-		<div class="medium-8 columns content" role="content">
+		<div class="medium-8 columns content" role="content" data-equalizer-watch>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
