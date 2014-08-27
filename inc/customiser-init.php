@@ -104,7 +104,7 @@ function om_connect_customizer_settings( $wp_customize ) {
 
 	// Footer Colors
 	$wp_customize->add_setting( 'footer_txt_color' , array(
-		'default'     => 'rgba(255, 255, 255, 0.6)',
+		'default'     => '#ededed',
 		'transport'   => 'refresh',
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_txt_color', array(
