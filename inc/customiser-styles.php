@@ -26,7 +26,8 @@ function bambino_enqueue_custom_styles()
 			.top-bar .top-bar-section .primary-menu > li.current_page_item,
 			.top-bar .top-bar-section .primary-menu > li.current_page_ancestor,
 			.top-bar .top-bar-section li.active:not(.has-form) a:not(.button),
-			.top-bar .primary-menu > li.current_page_ancestor > a {
+			.top-bar .primary-menu > li.current_page_ancestor > a,
+			.comments-area #submit:hover {
 				background-color: <?php echo get_theme_mod( 'link_color'); ?> !important;
 			}
 
@@ -38,11 +39,23 @@ function bambino_enqueue_custom_styles()
 				color: <?php echo get_theme_mod( 'link_color'); ?>;
 			}
 
+			.content a:hover,
+			.sidebar a:hover,
+			.sidebar .side-nav li a:not(.button):hover {
+				color: <?php echo get_theme_mod( 'link_hover_color' ); ?>;
+			}
+
 			body .page-header .site-title {
 				font-family: <?php echo get_theme_mod( 'om_sitelogo_font' ); ?>;
 				color: <?php echo get_theme_mod( 'om_sitelogo_color' ); ?>;
 				text-shadow:  2px 2px 0px rgba(0, 0, 0, .08);
 			}
+
+			body.custom-background {
+				background-color: <?php echo get_theme_mod( 'background_color' ); ?>
+			}
+
+			
 
 		</style>
 	<?php

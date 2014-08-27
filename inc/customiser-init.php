@@ -9,6 +9,28 @@ if ( ! class_exists( 'WP_Customize_Control' ) )
 
 function om_connect_customizer_settings( $wp_customize ) {
 
+	// Lets move background color to the background image tab
+	$wp_customize->remove_control( 'background_color' );
+	$wp_customize->add_control(
+		'background_color',
+			array(
+				'section' => 'background_image',
+				'settings'   => 'background_color',
+			)
+	);
+
+	$wp_customize->add_setting(	'background_color', array (
+		'default'    => '#fefefe',
+		'transport'  => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'background_color', array(
+		'label'      => __( 'Background color', 'om-connect' ),
+		'section'    => 'background_image',
+		'settings'   => 'background_color',
+	) ) );
+
+
 	// Site logo customiser settings
 	$wp_customize->add_setting(
 		'om_sitelogo_font',
@@ -60,7 +82,7 @@ function om_connect_customizer_settings( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting( 'link_hover_color' , array(
-		'default'     => '#FFFFFF',
+		'default'     => '#e89379',
 		'transport'   => 'refresh',
 	) );
 
