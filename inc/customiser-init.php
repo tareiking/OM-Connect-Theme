@@ -69,8 +69,6 @@ function om_connect_customizer_settings( $wp_customize ) {
 	) ) );
 
 	// Theme Colors
-	$wp_customize->get_section('colors')->title = __( 'Theme Colors' );
-
 	$wp_customize->add_setting( 'link_color' , array(
 		'default'     => '#de6540',
 		'transport'   => 'refresh',
@@ -103,6 +101,32 @@ function om_connect_customizer_settings( $wp_customize ) {
 		'section'    => 'colors',
 		'settings'   => 'link_hover_color',
 	) ) );
+
+	// Footer Colors
+	$wp_customize->add_setting( 'footer_txt_color' , array(
+		'default'     => 'rgba(255, 255, 255, 0.6)',
+		'transport'   => 'refresh',
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_txt_color', array(
+		'label'      => __( 'Footer text color', 'om-connect' ),
+		'section'    => 'colors',
+		'settings'   => 'footer_txt_color',
+	) ) );
+
+	$wp_customize->add_setting( 'footer_hover_color' , array(
+		'default'     => '#ffffff',
+		'transport'   => 'refresh',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_hover_color', array(
+		'label'      => __( 'Footer Hover color', 'om-connect' ),
+		'section'    => 'colors',
+		'settings'   => 'footer_hover_color',
+	) ) );
+
+	// Change default customiser headings
+	$wp_customize->get_section('colors')->title = __( 'Site Colors' );
+	$wp_customize->get_section('header_image')->title = __( 'Site Logo' );
 
 }
 

@@ -52,10 +52,25 @@ function bambino_enqueue_custom_styles()
 			}
 
 			body.custom-background {
-				background-color: <?php echo get_theme_mod( 'background_color' ); ?>
+				background-color: <?php echo get_theme_mod( 'background_color' ); ?>;
 			}
 
-			
+			footer .footer p,
+			footer .footer h1,
+			footer .footer h2,
+			footer .footer h3,
+			footer .footer h3,
+			footer .footer h4,
+			footer .footer h5,
+			footer .footer h6,
+			footer .footer a
+			{
+				color: <?php echo get_theme_mod( 'footer_txt_color' ); ?> !important;
+			}
+
+			footer .footer a:hover {
+				color: <?php echo get_theme_mod( 'footer_hover_color' ); ?> !important;
+			}
 
 		</style>
 	<?php
