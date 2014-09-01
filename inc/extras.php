@@ -84,9 +84,13 @@ add_filter( 'admin_post_thumbnail_html', 'connect_change_featuredimage_content' 
 
 function connect_change_featuredimage_content( $content ) {
 
-	$instruction_content = 'Recommended size: <strong>960 x 460</strong>px.';
-	$instruction = '<p class="connect-featuredimage-instruction">' . $instruction_content . '</p>';
-	$content = $instruction . $content;
+	if ( get_post_type() == 'post' || get_post_type() == 'page' ) {
+
+		$instruction_content = 'Recommended size: <strong>960 x 460</strong>px.';
+		$instruction = '<p class="connect-featuredimage-instruction">' . $instruction_content . '</p>';
+		$content = $instruction . $content;
+
+	}
 
 	return $content;
 
