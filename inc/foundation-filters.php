@@ -268,12 +268,12 @@ function om_connect_gform_get_website_field( $field, $value, $lead_id, $form_id 
 
 	ob_start();
 	?>
-	<div id="input_<?php esc_attr_e( $input_id ); ?>_container" class="<?php echo apply_filters( 'om_connect_gforms_website_class', 'row collapse url', $field, $form_id ); ?>">
+	<div id="input_<?php esc_attr( $input_id ); ?>_container" class="<?php echo apply_filters( 'om_connect_gforms_website_class', 'row collapse url', $field, $form_id ); ?>">
 		<div class="small-3 large-2 columns">
 			<span class="prefix">http://</span>
 		</div>
 		<div class="small-9 large-10 columns">
-			<input id="input_<?php esc_attr_e( $input_id ); ?>" type="text" placeholder="<?php echo apply_filters( 'om_connect_gforms_website_placeholder', 'Enter your URL...', $field, $form_id ); ?>" tabindex="<?php esc_attr_e( $field['id'] ); ?>" name="input_<?php esc_attr_e( $input['id'] ); ?>" class="<?php echo apply_filters( 'om_connect_gforms_website_field_class', 'placeholder', $field, $form_id ); ?>">
+			<input id="input_<?php esc_attr( $input_id ); ?>" type="text" placeholder="<?php echo apply_filters( 'om_connect_gforms_website_placeholder', 'Enter your URL...', $field, $form_id ); ?>" tabindex="<?php esc_attr( $field['id'] ); ?>" name="input_<?php esc_attr( $input['id'] ); ?>" class="<?php echo apply_filters( 'om_connect_gforms_website_field_class', 'placeholder', $field, $form_id ); ?>">
 		</div>
 	</div>
 	<?php
@@ -297,8 +297,8 @@ function om_connect_gform_get_name_field( $field, $value, $lead_id, $form_id ) {
 			//Cache css id
 			$input_id = str_replace( '.', '_', $input['id'] );
 			?>
-			<div id="input_<?php esc_attr_e( $input_id ); ?>_container" class="<?php echo apply_filters( 'om_connect_gforms_name_class', 'large-6 columns', $field, $form_id, $input ); ?>">
-				<input id="input_<?php esc_attr_e( $input_id ); ?>" type="text" tabindex="<?php esc_attr_e( $field['id'] ); ?>" name="input_<?php esc_attr_e( $input['id'] ); ?>"
+			<div id="input_<?php esc_attr( $input_id ); ?>_container" class="<?php echo apply_filters( 'om_connect_gforms_name_class', 'large-6 columns', $field, $form_id, $input ); ?>">
+				<input id="input_<?php esc_attr( $input_id ); ?>" type="text" tabindex="<?php esc_attr( $field['id'] ); ?>" name="input_<?php esc_attr( $input['id'] ); ?>"
 			<?php if ( $input['label'] == "First" ) { ?>
 		placeholder="<?php echo apply_filters( 'gform_name_first', __( 'First', 'gravityforms' ), $form_id ); ?>" class="<?php echo apply_filters( 'om_connect_gforms_name_field_class', 'placeholder', $field, $form_id, $input ); ?>" />
 			<?php }
@@ -306,7 +306,7 @@ function om_connect_gform_get_name_field( $field, $value, $lead_id, $form_id ) {
 			placeholder="<?php echo apply_filters( 'gform_name_last',__( 'Last', 'gravityforms' ), $form_id ); ?>" class="<?php echo apply_filters( 'om_connect_gforms_name_field_class', 'placeholder', $field, $form_id, $input ); ?>" />
 			<?php
 			} ?>
-			<label for="input_<?php esc_attr_e( $input_id ); ?>"><?php echo $input['label']; ?></label>
+			<label for="input_<?php esc_attr( $input_id ); ?>"><?php echo $input['label']; ?></label>
 			</div>
 		<?php endforeach; ?>
 	</div>

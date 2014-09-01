@@ -125,8 +125,8 @@ function om_connect_customizer_settings( $wp_customize ) {
 	) ) );
 
 	// Change default customiser headings
-	$wp_customize->get_section('colors')->title = __( 'Site Colors' );
-	$wp_customize->get_section('header_image')->title = __( 'Site Logo' );
+	$wp_customize->get_section('colors')->title = __( 'Site Colors', 'om-connect' );
+	$wp_customize->get_section('header_image')->title = __( 'Site Logo', 'om-connect' );
 
 }
 
