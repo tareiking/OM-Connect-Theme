@@ -13,7 +13,7 @@ get_header(); ?>
 	<div class="content-wrap" data-equalizer>
 
 		<!-- Main Blog Content -->
-		<div class="medium-12 columns content" role="content">
+		<div class="medium-12 columns content" role="content" data-equalizer-watch>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 

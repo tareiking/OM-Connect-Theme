@@ -12,7 +12,7 @@ get_header(); ?>
 	<div class="content-wrap" data-equalizer>
 
 		<!-- Main Blog Content -->
-		<div class="medium-8 columns content" role="content">
+		<div class="medium-8 columns content" role="content" data-equalizer-watch>
 
 			<header class="page-header">
 				<h1 class="page-title"><?php _e( 'Not Found', 'om-connect' ); ?></h1>

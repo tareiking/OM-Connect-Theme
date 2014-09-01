@@ -14,7 +14,7 @@ get_header(); ?>
 	<?php get_sidebar( 'three-column' ); ?>
 
 		<!-- Main Blog Content -->
-		<div class="medium-6 columns content" role="content">
+		<div class="medium-6 columns content" role="content" data-equalizer-watch>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
