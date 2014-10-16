@@ -22,12 +22,14 @@ function om_connect_customizer_settings( $wp_customize ) {
 	$wp_customize->add_setting(	'background_color', array (
 		'default'    => '#4773ad',
 		'transport'  => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'background_color', array(
 		'label'      => __( 'Background color', 'om-connect' ),
 		'section'    => 'background_image',
 		'settings'   => 'background_color',
+		'sanitize_callback' => 'sanitize_hex_color',
 	) ) );
 
 
@@ -36,7 +38,8 @@ function om_connect_customizer_settings( $wp_customize ) {
 		'om_sitelogo_font',
 		array(
 			'default'   => 'Montserrat',
-			'transport' => 'refresh'
+			'transport' => 'refresh',
+			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 
@@ -60,6 +63,7 @@ function om_connect_customizer_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'om_sitelogo_color' , array(
 		'default'     => '#ffffff',
 		'transport'   => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'om_sitelogo_color', array(
@@ -72,16 +76,19 @@ function om_connect_customizer_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'link_color' , array(
 		'default'     => '#de6540',
 		'transport'   => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
 	$wp_customize->add_setting( 'tab_bg_color' , array(
 		'default'     => '#577582',
 		'transport'   => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
 	$wp_customize->add_setting( 'link_hover_color' , array(
 		'default'     => '#e89379',
 		'transport'   => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
@@ -106,6 +113,7 @@ function om_connect_customizer_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'footer_txt_color' , array(
 		'default'     => '#ededed',
 		'transport'   => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_txt_color', array(
 		'label'      => __( 'Footer text color', 'om-connect' ),
@@ -116,6 +124,7 @@ function om_connect_customizer_settings( $wp_customize ) {
 	$wp_customize->add_setting( 'footer_hover_color' , array(
 		'default'     => '#ffffff',
 		'transport'   => 'refresh',
+		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_hover_color', array(
