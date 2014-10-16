@@ -149,7 +149,7 @@ add_action( 'widgets_init', 'om_connect_widgets_init' );
 function om_connect_scripts() {
 	wp_enqueue_style( 'om-connect-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'google-fonts', connect_google_url(), array(), null );
-	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css' );
+	wp_enqueue_style( 'fontawesome', get_stylesheet_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.2.0', null );
 
 	wp_enqueue_style( 'foundation-style', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), '1.0' );
 
