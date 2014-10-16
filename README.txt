@@ -1,12 +1,11 @@
 OM Connect WordPress Theme
 ====================================================
 
-OM Connect is a 'lite' version of Organic Themes Connect Theme and has been built for usage on the Ourmarae.com network.
+OM-Connect was built for the Ourmarae.com platform, which helps get New Zealand marae sites online with the power of WordPress as the web publishing platform.
 
-This theme has been made freely available with pending permissions and accreditations from Organic Themes.
+The Ourmarae.com platform requires themes to be easy to customise, offer a limited range of extensibility and be compatible with some common plugins. As Ourmarae.com is a platform built for open-sourcing, it was decided to offer this theme to the WordPress community.
 
-This particular theme is built with Zurb's Foundation 5 Framework and Sennza Flair starter theme. This theme can be directly
-forked from Github at http://github.com/tareiking/om-connect-theme. As always, patches are welcome.
+Permission for the creation of the theme based on the design from Connect Theme by Organic Themes has been expressly granted as per ticket https://themes.trac.wordpress.org/ticket/20488
 
 Licensing and Permissions
 =====================================================
@@ -25,3 +24,7 @@ JS, CSS and Fonts
 Images
 
 - Logo.png, created by me under GPL license. Is compiled of FontAwesome's http://fortawesome.github.io/Font-Awesome/icon/circle-o-notch/ : MIT License
+
+Original Design
+
+- Connect Theme by Organic Themes ( http://organicthemes.com/theme/connect-theme/ ) : GPLv2
