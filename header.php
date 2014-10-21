@@ -43,7 +43,7 @@
 		</h1>
 	<?php } else { ?>
 		<h1 class="site-title">
-			<?php echo get_bloginfo( 'title', 'display' ); ?>
+			<?php echo get_bloginfo( 'name', 'display' ); ?>
 		</h1>
 	<?php } ?>
 </div>
