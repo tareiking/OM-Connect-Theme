@@ -64,7 +64,7 @@
 				'theme_location' => 'primary',
 				'container'      => false,
 				'menu_class'     => 'primary-menu',
-				'fallback_cb'    => 'om_connect_page_menu',
+				'fallback_cb'    => '',
 			)
 		); ?>
 		</section>
