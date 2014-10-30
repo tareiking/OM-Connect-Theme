@@ -42,11 +42,8 @@ function change_custom_background_cb() {
 			$attachment = 'scroll';
 		$attachment = " background-attachment: $attachment;";
 
-		if ( $attachment == " background-attachment: fixed;" ){
-			$cover = " background-size: cover;";
-		}
 
-		$style .= $image . $repeat . $position . $attachment . $cover;
+		$style .= $image . $repeat . $position . $attachment;
 	}
 ?>
 <style type="text/css" id="custom-background-css">
