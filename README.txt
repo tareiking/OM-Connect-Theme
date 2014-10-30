@@ -28,3 +28,32 @@ Images
 Original Design
 
 - Connect Theme by Organic Themes ( http://organicthemes.com/theme/connect-theme/ ) : GPLv2
+
+
+Changelog
+===============
+
+v 0.9.11
+--------
+- remove 'cover' custom_background setting as it wasn't working as intended
+- remove menu fallback, you must now specify a "primary menu" in order to have a navigation menu
+- now supports both logo + title options
+
+v 0.9.10
+--------
+- Update screenshot
+- Update theme description
+- Update readme.txt
+- Add sanitize options to the theme customiser
+- Fix #15 - Enqueue FontAwesome CSS
+- Update theme URI
+- Remove 'erroneous' github URI in style.
+- Bundle FontAwesome as per theme review
+- Update theme uri, description and autho
+- Add licensing information to readme.txt
+- Only add the featured image instruction
+- Version bump 0.9.9 ~ Theme Review
+
+pre 0.9.1
+---------
+- full git log and commits available at : https://github.com/tareiking/OM-Connect-Theme/
