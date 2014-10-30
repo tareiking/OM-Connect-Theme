@@ -35,17 +35,18 @@
 </head>
 <body <?php body_class(); ?>>
 <div class="page-header text-center row">
-	<?php if ( get_header_image() ) { ?>
-		<h1>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img class="site-logo" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo('name'); ?>">
-			</a>
-		</h1>
-	<?php } else { ?>
-		<h1 class="site-title">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+
+		<?php if ( get_header_image() ) { ?>
+			<img class="site-logo" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo('name'); ?>">
+		<?php } ?>
+
+		<h2 class="site-title">
 			<?php echo get_bloginfo( 'name', 'display' ); ?>
-		</h1>
-	<?php } ?>
+		</h2>
+
+	</a>
+
 </div>
 
 <div <?php om_connect_top_bar( 'contain-to-grid' );?>>

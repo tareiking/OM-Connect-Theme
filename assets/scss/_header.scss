@@ -33,7 +33,7 @@
 // Site Header / logo
 
 .page-header .site-logo {
-	padding: rem-calc(30 0);
+	padding: rem-calc(30 0 0 0);
 }
 
 .page-header .site-title {
@@ -41,4 +41,8 @@
 	clip: auto;
 	padding: rem-calc(30 0);
 	font-size: rem-calc(50);
+}
+
+.page-header .site-logo + .site-title {
+	padding: rem-calc( 10 0 );
 }
