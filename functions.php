@@ -158,7 +158,6 @@ function om_connect_scripts() {
 	}
 
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/js/modernizr.js', array(), '2.7.1' );
-	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/js/foundation.min.js', array( 'jquery' ), FOUNDATION_VERSION, true );
 	wp_enqueue_script( 'app', get_template_directory_uri() . '/assets/js/app.js', array( 'foundation' ), '1.0', true );
 
