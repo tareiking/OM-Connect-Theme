@@ -42,8 +42,11 @@ function change_custom_background_cb() {
 			$attachment = 'scroll';
 		$attachment = " background-attachment: $attachment;";
 
-
 		$style .= $image . $repeat . $position . $attachment;
+
+		if ( get_theme_mod( 'om_background_cover' ) == true ){
+			$style .= "background-size: cover; background-attachment: fixed;";
+		}
 	}
 ?>
 <style type="text/css" id="custom-background-css">
