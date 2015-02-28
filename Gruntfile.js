@@ -4,11 +4,11 @@ module.exports = function(grunt) {
 
 	sass: {
 		options: {
-			includePaths: ['bower_components/foundation/scss']
+			loadPath: ['bower_components/foundation/scss']
 		},
 		dist: {
 			options: {
-				outputStyle: 'compressed'
+				style: 'compressed'
 			},
 			files: {
 				'assets/css/style.css':        'assets/scss/app.scss',
@@ -43,7 +43,9 @@ module.exports = function(grunt) {
 					'!.gitignore',
 					'!.gitmodules',
 					'!.bowerrc',
-					'!README.md'
+					'!README.md',
+					'!codesniffer.ruleset.xml',
+					'!.travis.yml'
 				],
 				dest: 'releases/<%= pkg.version %>/files/'
 			}
@@ -60,28 +62,59 @@ module.exports = function(grunt) {
 		}
 	},
 	bowercopy: {
-		foundation: {
+		new: {
 			options: {
-            	destPrefix: 'assets',
+				destPrefix: 'assets',
 				srcPrefix: 'bower_components'
-        	},
+			},
 			files: {
 				'js/foundation': 'foundation/js/foundation',
 				'js/foundation.min.js': 'foundation/js/foundation.min.js',
 				'js/modernizr.js': 'modernizr/modernizr.js',
 				'scss/_settings.scss': 'foundation/scss/foundation/_settings.scss'
 			}
+		},
+		existing: {
+			options: {
+				destPrefix: 'assets',
+				srcPrefix: 'bower_components'
+			},
+			files: {
+				'js/foundation': 'foundation/js/foundation',
+				'js/foundation.min.js': 'foundation/js/foundation.min.js',
+				'js/modernizr.js': 'modernizr/modernizr.js'
+			}
+		}
+	},
+	imagemin: {
+		build: {
+			files: [{
+				expand: true,
+				cwd: './assets/images/',
+				src: ['**/*.{png,jpg,gif}'],
+				dest: './assets/images/'
+			}],
+				options: {
+				optimizationLevel: 7
+			}
 		}
 	}
 
 });
 	grunt.loadNpmTasks('grunt-bowercopy');
-	grunt.loadNpmTasks('grunt-sass');
+	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-compress');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 
-	grunt.registerTask('setup', ['bowercopy','sass']);
+	grunt.registerTask('setup', function(){
+		if ( true == grunt.file.exists('assets/scss/_settings.scss') ) {
+			grunt.task.run(['bowercopy:existing', 'sass']);
+		} else {
+			grunt.task.run(['bowercopy:new', 'sass']);
+		}
+	});
 	grunt.registerTask('default', ['sass','watch']);
-	grunt.registerTask('build', ['sass', 'copy', 'compress']);
+	grunt.registerTask('build', ['sass', 'copy', 'compress', 'imagemin']);
 }
