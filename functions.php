@@ -200,11 +200,11 @@ function connect_admin_scripts(){
 add_action( 'admin_enqueue_scripts', 'connect_admin_scripts' );
 
 // title tag implementation with backward compatibility
-if ( ! function_exists( '_wp_render_title_tag' ) ) {
+if ( ! function_exists( '_wp_render_title_tag' ) ) :
 
-	function theme_slug_render_title() {
-		echo '<title>' . wp_title( '|', false, 'right' ) . "</title>\n";
-	}
+	function theme_slug_render_title() { ?>
+		<title><?php wp_title( '|', true, 'right' ); ?></title>
+	<?php }
 
 	add_action( 'wp_head', 'theme_slug_render_title' );
-}
+endif;
