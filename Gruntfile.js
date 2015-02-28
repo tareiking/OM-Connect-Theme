@@ -4,11 +4,11 @@ module.exports = function(grunt) {
 
 	sass: {
 		options: {
-			loadPath: ['bower_components/foundation/scss']
+			includePaths: ['bower_components/foundation/scss']
 		},
 		dist: {
 			options: {
-				style: 'compressed'
+				outputStyle: 'compressed'
 			},
 			files: {
 				'assets/css/style.css':        'assets/scss/app.scss',
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
 
 });
 	grunt.loadNpmTasks('grunt-bowercopy');
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-compress');
