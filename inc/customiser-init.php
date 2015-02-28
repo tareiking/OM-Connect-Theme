@@ -18,6 +18,7 @@ function om_connect_customizer_settings( $wp_customize ) {
 		array(
 			'default'   => false,
 			'transport' => 'refresh',
+			'sanitize_callback' => 'om_sanitize_boolean',
 		)
 	);
 
@@ -138,3 +139,14 @@ function om_connect_customizer_settings( $wp_customize ) {
 }
 
 add_action( 'customize_register', 'om_connect_customizer_settings' );
+
+/**
+ * Checks if boolean, otherwise, returns false
+ */
+
+function om_sanitize_boolean( $setting ){
+	if ( is_bool( $setting ) ) {
+		return $setting;
+	}
+	return false;
+}
