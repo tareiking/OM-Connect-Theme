@@ -51,10 +51,6 @@ function om_connect_enqueue_custom_styles()
 				text-shadow:  2px 2px 0px rgba(0, 0, 0, .08);
 			}
 
-			body.custom-background {
-				background-color: <?php echo get_theme_mod( 'background_color' ); ?>;
-			}
-
 			footer .footer p,
 			footer .footer h1,
 			footer .footer h2,
