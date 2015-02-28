@@ -12,6 +12,25 @@ function om_connect_customizer_settings( $wp_customize ) {
 	// Lets move background color to the background image tab
 	$wp_customize->get_control('background_color')->section = 'background_image';
 
+	// Add 'cover' as a background type for those themers
+	$wp_customize->add_setting(
+		'om_background_cover',
+		array(
+			'default'   => false,
+			'transport' => 'refresh',
+		)
+	);
+
+	$wp_customize->add_control(
+		'om_background_cover',
+		array(
+			'type' => 'checkbox',
+			'label' => 'Fullscreen background',
+			'section' => 'background_image',
+		)
+	);
+
+
 	// Site logo customiser settings
 	$wp_customize->add_setting(
 		'om_sitelogo_font',
