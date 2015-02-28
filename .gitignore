@@ -8,3 +8,5 @@
 /assets/js/modernizr.js
 /assets/css/editor-style.css
 /assets/css/style.css
+.sass-cache/
+assets/css/*.map
