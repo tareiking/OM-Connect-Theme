@@ -13,14 +13,14 @@ function om_connect_enqueue_custom_styles()
 			.top-bar .top-bar-section .primary-menu > li.current_page_ancestor a,
 			.top-bar .top-bar-section li:not(.has-form) a:not(.button),
 			.top-bar .top-bar-section .dropdown li:not(.has-form):not(.active):hover>a:not(.button) {
-				 background-color: <?php echo get_theme_mod( 'tab_bg_color' ); ?>;
+				 background-color: <?php echo esc_html( get_theme_mod( 'tab_bg_color' ) ); ?>;
 			}
 
 			.top-bar .top-bar-section .primary-menu li:hover,
 			body .top-bar .top-bar-section .primary-menu li a:hover,
 			.top-bar .top-bar-section .primary-menu > li.current_page_item a:hover,
 			.top-bar .top-bar-section .primary-menu > li.current_page_ancestor a:hover {
-				background-color: <?php echo get_theme_mod( 'tab_bg_color' ); ?>;
+				background-color: <?php echo esc_html( get_theme_mod( 'tab_bg_color' ) ); ?>;
 			}
 
 			.top-bar .top-bar-section .primary-menu > li.current_page_item,
@@ -28,7 +28,7 @@ function om_connect_enqueue_custom_styles()
 			.top-bar .top-bar-section li.active:not(.has-form) a:not(.button),
 			.top-bar .primary-menu > li.current_page_ancestor > a,
 			.comments-area #submit:hover {
-				background-color: <?php echo get_theme_mod( 'link_color'); ?> !important;
+				background-color: <?php echo esc_html( get_theme_mod( 'link_color') ); ?> !important;
 			}
 
 			.content a,
@@ -36,18 +36,18 @@ function om_connect_enqueue_custom_styles()
 			.content h2,
 			.sidebar .side-nav li a:not(.button),
 			.content .entry-title a:hover {
-				color: <?php echo get_theme_mod( 'link_color'); ?>;
+				color: <?php echo esc_html( get_theme_mod( 'link_color') ); ?>;
 			}
 
 			.content a:hover,
 			.sidebar a:hover,
 			.sidebar .side-nav li a:not(.button):hover {
-				color: <?php echo get_theme_mod( 'link_hover_color' ); ?>;
+				color: <?php echo esc_html( get_theme_mod( 'link_hover_color' ) ); ?>;
 			}
 
 			body .page-header .site-title {
-				font-family: <?php echo get_theme_mod( 'om_sitelogo_font' ); ?>;
-				color: <?php echo get_theme_mod( 'om_sitelogo_color' ); ?>;
+				font-family: <?php echo esc_html( get_theme_mod( 'om_sitelogo_font' ) ); ?>;
+				color: <?php echo esc_html( get_theme_mod( 'om_sitelogo_color' ) ); ?>;
 				text-shadow:  2px 2px 0px rgba(0, 0, 0, .08);
 			}
 
@@ -61,11 +61,11 @@ function om_connect_enqueue_custom_styles()
 			footer .footer h6,
 			footer .footer a
 			{
-				color: <?php echo get_theme_mod( 'footer_txt_color' ); ?> !important;
+				color: <?php echo esc_html( get_theme_mod( 'footer_txt_color' ) ); ?> !important;
 			}
 
 			footer .footer a:hover {
-				color: <?php echo get_theme_mod( 'footer_hover_color' ); ?> !important;
+				color: <?php echo esc_html( get_theme_mod( 'footer_hover_color' ) ); ?> !important;
 			}
 
 		</style>

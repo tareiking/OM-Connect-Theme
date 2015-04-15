@@ -50,7 +50,7 @@ function change_custom_background_cb() {
 	}
 ?>
 <style type="text/css" id="custom-background-css">
-	body.custom-background { <?php echo trim( $style ); ?> }
+	body.custom-background { <?php echo esc_html( trim( $style ) ); ?> }
 </style>
 <?php
 }
